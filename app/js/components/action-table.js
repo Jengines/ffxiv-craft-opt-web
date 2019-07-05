@@ -28,13 +28,6 @@
     $scope.actionForName = actionForName;
     $scope.iActionClassSpecific = _iActionClassSpecific;
 
-    $scope.actionTooltips = {};
-
-    $scope.$on("tooltipCacheUpdated", updateActionTooltips);
-    $scope.$watch("cls", updateActionTooltips);
-
-    updateActionTooltips();
-
     //////////////////////////////////////////////////////////////////////////
 
     function updateActionTooltips() {
