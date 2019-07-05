@@ -51,13 +51,12 @@ function Crafter(cls, level, craftsmanship, control, craftPoints, specialist, ac
     }
 }
 
-function Recipe(level, difficulty, durability, startQuality, maxQuality, aspect) {
+function Recipe(level, difficulty, durability, startQuality, maxQuality) {
     this.level = level;
     this.difficulty = difficulty;
     this.durability = durability;
     this.startQuality = startQuality;
     this.maxQuality = maxQuality;
-    this.aspect = aspect;
 }
 
 function Synth(crafter, recipe, maxTrickUses, reliabilityIndex, useConditions, maxLength) {

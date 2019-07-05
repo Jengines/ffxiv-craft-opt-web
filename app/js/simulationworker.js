@@ -50,8 +50,7 @@ function setupSim(settings) {
     settings.recipe.difficulty,
     settings.recipe.durability,
     settings.recipe.startQuality,
-    settings.recipe.maxQuality,
-    settings.recipe.aspect);
+    settings.recipe.maxQuality);
   var synth = new Synth(crafter, recipe, settings.maxTricksUses, settings.reliabilityPercent / 100.0,
     settings.useConditions, 0);
   var synthNoConditions = new Synth(crafter, recipe, settings.maxTricksUses, settings.reliabilityPercent / 100.0,
