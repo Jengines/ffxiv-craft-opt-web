@@ -71,8 +71,8 @@ var AllActions = {
     //trainedHand: new Action(        'trainedHand',          'Trained Hand',         10,     16,  1.0, 1.5, 1.5, 'immediate',   1,  'All',          58),
 
     // Elemental Aspect Actions
-    brandOfTheElements: new Action( 'brandOfTheElements',   'Brand of the Elements', 10,     6,  0.9, 0.0, 1.0, 'immediate',   1,  'All',          37),
-    nameOfTheElements: new Action(  'nameOfTheElements',    'Name of the Elements',  0,    15,  1.0, 0.0, 0.0, 'countdown',   5,  'All',          37),
+    brandOfTheElements: new Action('brandOfTheElements', 'Brand of the Elements', 10, 6, 0.9, 0.0, 1.0, 'immediate', 1, 'All', 37),
+    nameOfTheElements: new Action('nameOfTheElements', 'Name of the Elements', 0, 15, 1.0, 0.0, 0.0, 'countdown', 5, 'All', 37),
 
     // Stormblood actions
     //   
@@ -92,13 +92,10 @@ var AllActions = {
 
     // ShadowBringers actions
     //
-    preparatoryTouch: new Action(   'preparatoryTouch',     'Preparatory Touch',    20,     36,  0.7, 2.0, 0.0, 'immediate',   1,  'All',          71),
-    rapidSynthesis3: new Action(    'rapidSynthesis3',      'Rapid Synthesis III',  20,     24,  0.6, 0.0, 6.0, 'immediate',   1,  'All',          72),
-    //reuse: new Action(              'reuse',                'Reuse',                 0,     60,  0.0, 0.0, 0.0, 'immediate',   1,  'All',          74),
-    delicateSynthesis: new Action(  'delicateSynthesis',    'Delicate Synthesis',   10,     32,  1.0, 1.0, 1.0, 'immediate',   1,  'All',          76),
-    intensiveSynthesis: new Action( 'intensiveSynthesis',   'Intensive Synthesis',  10,     12,  0.8, 0.0, 3.0, 'immediate',   1,  'All',          78,  true,       true),
-    //trainedEye: new Action(         'trainedEye',           'Trained Eye',          10,    250,  1.0, 1.0, 0.0, 'immediate',   1,  'All',          80),
-    //trainedInstinct: new Action(    'trainedInstinct',      'Trained Instinct',     10,    250,  1.0, 1.0, 0.0, 'immediate',   1,  'All',          80),
+    preparatoryTouch: new Action('preparatoryTouch', 'Preparatory Touch', 20, 36, 0.7, 2.0, 0.0, 'immediate', 1, 'All', 71),
+    rapidSynthesis3: new Action('rapidSynthesis3', 'Rapid Synthesis III', 20, 24, 0.6, 0.0, 6.0, 'immediate', 1, 'All', 72),
+    delicateSynthesis: new Action('delicateSynthesis', 'Delicate Synthesis', 10, 32, 1.0, 1.0, 1.0, 'immediate', 1, 'All', 76),
+    intensiveSynthesis: new Action('intensiveSynthesis', 'Intensive Synthesis', 10, 12, 0.8, 0.0, 3.0, 'immediate', 1, 'All', 78, true, true),
 
     // Special Actions - not selectable
     finishingTouches: new Action('finishingTouches', 'Finishing Touches', 10, 0, 0.5, 0.0, 2.0, 'immediate', 1, 'All', 55),
