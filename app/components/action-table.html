@@ -7,7 +7,7 @@
              ng-class="cssClassesForAction(action)"
              lvl-draggable="{{draggable}}"
              data-new-action="{{action}}"
-             tooltip="{{actionForName(action).name | translate}}"
+             tooltip-html-unsafe="{{actionTooltips[action]}}"
              tooltip-placement="{{tooltipPlacement}}"
              tooltip-append-to-body="true">
             <img ng-src="{{getActionImagePath(action, cls)}}"/>

@@ -93,40 +93,6 @@
             common: true,
             buff: true
         },
-        hastyTouch2: {
-            common: true
-        },
-        carefulSynthesis3: {
-            common: true
-        },
-        rapidSynthesis2: {
-            common: true
-        },
-        patientTouch: {},
-        manipulation2: {
-            common: true,
-            buff: true
-        },
-        prudentTouch: {},
-        focusedSynthesis: {},
-        focusedTouch: {},
-        initialPreparations: {
-            common: true
-        },
-        specialtyReinforce: {
-            common: true
-        },
-        specialtyRefurbish: {
-            common: true
-        },
-        specialtyReflect: {
-            common: true
-        },
-        strokeOfGenius: {
-            common: true,
-            buff: true
-        },
-
         // Stormblood
         hastyTouch2: {
             common: true
