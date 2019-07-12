@@ -23,7 +23,6 @@
 
     for (var i = 0; i < this._allActions.length; i++) {
       var action = this._allActions[i];
-      if (action.skillID) {
         if (action.cls === 'All') {
           for (var j = 0; j < this._allClasses.length; j++) {
             var cls = this._allClasses[j];
@@ -33,7 +32,6 @@
         else {
           this.actionTooltips[action.cls + action.shortName] = this.renderTooltip(action);
         }
-      }
     }
 
     this.$rootScope.$broadcast("tooltipCacheUpdated");

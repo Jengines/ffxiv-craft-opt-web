@@ -2,7 +2,7 @@
     <div class="action" ng-repeat="action in actions track by $index">
         <div class="image-wrap glossy icon"
              ng-class="cssClassesForAction(action, $index)"
-             tooltip-html-unsafe="{{actionTooltips[action]}}"
+             tooltip="{{actionForName(action).name | translate}}"
              tooltip-placement="{{tooltipPlacement}}"
              tooltip-append-to-body="true">
             <img ng-src="{{getActionImagePath(action, cls)}}"/>
