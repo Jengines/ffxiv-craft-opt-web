@@ -14,4 +14,4 @@ app.use('/', serveStatic(path.join(__dirname, 'app')));
 const port = 8001;
 app.listen(port);
 
-console.log('Server listening on port', port);
+console.log('Server listening on porte', port);
