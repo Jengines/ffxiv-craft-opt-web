@@ -18,6 +18,5 @@
   },
   "devDependencies": {
     "browser-sync": "^2.26.7"
-  },
-  "start": "node app.js"
+  }
 }
