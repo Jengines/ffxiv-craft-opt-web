@@ -19,5 +19,5 @@
   "devDependencies": {
     "browser-sync": "^2.26.7"
   },
-  "start": "npm start"
+  "start": "node app.js"
 }
