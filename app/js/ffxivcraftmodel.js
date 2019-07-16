@@ -67,13 +67,11 @@ Synth.prototype.calculateBaseProgressIncrease = function (levelDifference, craft
     var levelCorrectedProgress = 0;
     var recipeLevelPenalty = 0;
 
-    // if (crafterLevel > 300) {
-    //     // FIXME incorrect, too high
-    //     baseProgress = 3.834712812e-5 * craftsmanship * craftsmanship + 2.988074773e-1 * craftsmanship + 5.939242248541;
-    // }
-    // else
-
-    if (crafterLevel > 250) {
+    if (crafterLevel > 380) {
+        // FIXME incorrect
+        // baseProgress = 1.570825624e-5 * craftsmanship * craftsmanship + 1.846309546e-1 * craftsmanship + 0.403687674;
+    }
+    else if (crafterLevel > 250) {
         baseProgress = 1.834712812e-5 * craftsmanship * craftsmanship + 1.904074773e-1 * craftsmanship + 1.544103837;
     } else if (crafterLevel > 110) {
         baseProgress = 2.09860e-5 * craftsmanship * craftsmanship + 0.196184 * craftsmanship + 2.68452;
@@ -1574,8 +1572,7 @@ function heuristicSequenceBuilder(synth) {
 
     // Determine base progress
     var levelDifference = effCrafterLevel - effRecipeLevel;
-    var bProgressGain = synth.calculateBaseProgressIncrease(levelDifference, synth.crafter.craftsmanship, effCrafterLevel, effRecipeLevel);
-    var progressGain = bProgressGain;
+    var progressGain = synth.calculateBaseProgressIncrease(levelDifference, synth.crafter.craftsmanship, effCrafterLevel, effRecipeLevel);
     progressGain *= aa[preferredAction].progressIncreaseMultiplier;
     progressGain = Math.floor(progressGain);
 
@@ -1777,7 +1774,17 @@ var LevelTable = {
     67: 282,
     68: 285,
     69: 288,
-    70: 290
+    70: 290,
+    71: 390,
+    72: 395,
+    73: 400,
+    74: 403,
+    75: 406,
+    76: 409,
+    77: 412,
+    78: 415,
+    79: 418,
+    80: 420
 };
 
 var Ing1RecipeLevelTable = {
