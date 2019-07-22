@@ -67,11 +67,9 @@ Synth.prototype.calculateBaseProgressIncrease = function (levelDifference, craft
     var levelCorrectedProgress = 0;
     var recipeLevelPenalty = 0;
 
-    // if (crafterLevel > 380) {
-        // FIXME incorrect
-        // baseProgress = 1.570825624e-5 * craftsmanship * craftsmanship + 1.846309546e-1 * craftsmanship + 0.403687674;
-    // }else
-    if (crafterLevel > 250) {
+    if (crafterLevel > 380) {
+        baseProgress = 1.612934e-5 * craftsmanship * craftsmanship + 0.1892751 * craftsmanship - 1.232056;
+    } else if (crafterLevel > 250) {
         baseProgress = 1.834712812e-5 * craftsmanship * craftsmanship + 1.904074773e-1 * craftsmanship + 1.544103837;
     } else if (crafterLevel > 110) {
         baseProgress = 2.09860e-5 * craftsmanship * craftsmanship + 0.196184 * craftsmanship + 2.68452;
@@ -95,9 +93,13 @@ Synth.prototype.calculateBaseProgressIncrease = function (levelDifference, craft
 
     // Level penalty for recipes above crafter level
     if (levelDifference < 0) {
-        levelCorrectionFactor += 0.025 * Math.max(levelDifference, -10);
-        if (ProgressPenaltyTable[recipeLevel]) {
-            recipeLevelPenalty += ProgressPenaltyTable[recipeLevel];
+        if (crafterLevel > 380) {
+            levelCorrectionFactor += 0.0265 * Math.max(levelDifference, -10);
+        } else {
+            levelCorrectionFactor += 0.025 * Math.max(levelDifference, -10);
+            if (ProgressPenaltyTable[recipeLevel]) {
+                recipeLevelPenalty += ProgressPenaltyTable[recipeLevel];
+            }
         }
     }
 
@@ -1833,6 +1835,16 @@ var Ing1RecipeLevelTable = {
     300: 291,   // 70_1star
     320: 292,   // 70_2star
     350: 293,   // 70_3star
+    390: 365,   // 71
+    395: 375,   // 72
+    400: 385,   // 73
+    403: 393,   // 74
+    406: 396,   // 75
+    409: 399,   // 76
+    412: 402,   // 77
+    415: 405,   // 78
+    418: 408,   // 79
+    420: 411,   // 80
 };
 
 var Ing2RecipeLevelTable = {
@@ -1881,6 +1893,16 @@ var Ing2RecipeLevelTable = {
     300: 290,   // 70_1star
     320: 291,   // 70_2star
     350: 292,   // 70_3star
+    390: 350,   // 71
+    395: 360,   // 72
+    400: 370,   // 73
+    403: 380,   // 74
+    406: 383,   // 75
+    409: 386,   // 76
+    412: 389,   // 77
+    415: 392,   // 78
+    418: 395,   // 79
+    420: 398,   // 80
 };
 
 var NymeaisWheelTable = {
